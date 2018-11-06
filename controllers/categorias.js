@@ -18,6 +18,7 @@ const list = async (request, response) => {
 
 const apagar = async (req, res) => {
     await api.apagar('categorias', req.params.id)
+    await api.apagar('publicacoes', req.params.id)
     res.redirect('/categorias')
 }
 

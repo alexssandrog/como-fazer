@@ -2,6 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 
 const categorias = require('./routes/categorias')
+const publicacoes = require('./routes/publicacoes')
 
 const app = express()
 
@@ -15,6 +16,7 @@ app.get('/', async (request, response) => {
 })
 
 app.use('/categorias', categorias)
+app.use('/publicacoes', publicacoes)
 
 app.listen(port, (err) => {
     if (err) {
